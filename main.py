@@ -19,7 +19,6 @@ client = TelegramClient('user_session', api_id, api_hash)
 async def forward_message(event):
     try:
         await client.send_message(target_group, event.message)
-        print(f"✅ Forwarded message: {event.id}")
     except Exception as e:
         print(f"❌ Error: {e}")
 
